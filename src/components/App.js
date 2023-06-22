@@ -34,7 +34,7 @@ const App = () => {
     <div>
       {isLogged ? (
         <div>
-          <h1>Counter: {counter}</h1>
+          <h1 data-testid='counter'>Counter: {counter}</h1>
           <button onClick={handleIncrement}>+</button>
           <button onClick={handleDecrement}>-</button>
           <input
@@ -43,11 +43,11 @@ const App = () => {
             onChange={(e) => setAmount(e.target.value)}
           />
           <button onClick={handleAddAmount}>Add amount</button>
-          <button onClick={handleSignOut}>Logout</button>
+          <button name='Logout' onClick={handleSignOut}>Logout</button>
         </div>
       ) : (
         <div>
-          <button onClick={handleSignIn}>Login</button>
+          <button name='Login' onClick={handleSignIn}>Login</button>
         </div>
       )}
     </div>
